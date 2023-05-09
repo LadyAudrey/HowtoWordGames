@@ -1,0 +1,23 @@
+.header-container {
+    background-color: var(--dark-purple);
+    color: var(--light-green);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: .4vw rgba(38, 70, 96, .3) solid;
+}
+
+.new-game {
+    padding: 1vw;
+    height: 100px;
+    width: auto;
+    border-radius: 50%;
+}
+
+#header-restart {
+    position: absolute;
+    right: 0;
+}
