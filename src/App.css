@@ -51,18 +51,25 @@ table {
 }
 
 :root {
-  --light-tan: #ffe7c7;
+  --lightest-tan: #f1e8da;
+  --light-tan: #c9aa80;
   --mid-tan: #956c34;
-  --dark-tan: #281700;
+  --dark-tan: #573607;
+  --darkest-tan: #281700;
 
   --light-purple: #A393b9;
   --mid-purple: #432965;
   --dark-purple: #0d021b;
 
   --lightest-greene:#C6E4B2;
-  --light-green: rgba(5, 2, 2);
-  /* changed above to allow opacity in header bottom border */
-  --dark-blue: #010F1A;
+  --light-green: #70b741;
+  --mid-green:#448c14;
+  --dark-green: #091501;
+
+  --lightest-blue: #b3c1cd;
+  --light-blue: #74a2ca;
+  --mid-blue: #27669e;
+  --dark-blue: #032038;
 }
 
 #root {
@@ -73,20 +80,36 @@ table {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
+  color: var(--light-tan);
 }
 
 h2{
-  font-size: 1.5rem;
+  font-size: 3rem;
+  padding-top: 12rem;
 }
 
-button {
-  border: var(--light-tan) 5px solid;
+input {
+  background-color: var(--lightest-tan);
+  height: 4rem;
+  width: 30rem;
+  border: var(--dark-tan) 5px solid;
   border-radius: 5%;
-  font-size: x-large;
-  font-weight: 700;
+  font-size: 2rem;
 }
 
 .new-game {
   border: none;
+}
+
+.WGbutton {
+  padding: 1vw;
+  margin: 1vw;
+  border-radius: 10%;
+  width: fit-content;
+  background-color: var(--dark-tan);
+  border: var(--mid-blue) 5px solid;
+  color: var(--dark-purple);
+  font-size: x-large;
+  font-weight: 700;
 }

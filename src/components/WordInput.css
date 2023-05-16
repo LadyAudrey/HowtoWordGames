@@ -1,0 +1,10 @@
+#interactive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#lets-play {
+    background-color: var(--light-tan);
+    color: var(--mid-purple);
+}
