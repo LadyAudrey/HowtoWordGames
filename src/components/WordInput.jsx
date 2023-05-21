@@ -1,17 +1,32 @@
 import "./WordInput.css";
 import { useState } from "react";
 
-export default function WordInput() {
-  const [wordInput, setWordInput] = useState("");
+import { containsLetters } from "../utils/ContainsLetters";
+import { containsString } from "../utils/ContainsString";
+import { palindrome } from "../utils/Palindrome";
+import { anagram } from "../utils/Anagram";
+
+export default function WordInput(props) {
+  let inputValue = "";
   function handleChange(e) {
-    setWordInput(e.target.value);
+    inputValue = e.target.value;
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
   }
   return (
     <>
       <div id="interactive">
         <label htmlFor="wordArgument">Your input:</label>
-        <input type="text" name="wordArgument" onChange={handleChange} />
-        <button class="WGbutton" id="lets-play">Let's Play</button>
+        <input
+          type="text"
+          name="wordArgument"
+          value={inputValue}
+          onChange={handleChange}
+        />
+        <button class="WGbutton" id="lets-play" onClick={handleSubmit}>
+          Let's Play
+        </button>
       </div>
     </>
   );
