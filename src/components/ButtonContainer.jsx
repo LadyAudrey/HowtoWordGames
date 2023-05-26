@@ -1,38 +1,58 @@
 import React from "react";
 import "./ButtonContainer.css";
+import { containsLetters } from "../utils/ContainsLetters";
 
 export default function ButtonContainer(props) {
+  const { setButtonSelection, buttonSelection, setSelectionMade } = props;
   return (
     <div id="game-buttons">
       <button
         onClick={() => {
-          props.setButtonSelection("containsLetters");
+          setButtonSelection("containsLetters");
+          setSelectionMade(true);
         }}
-        className="WGbutton"
+        className={
+          buttonSelection === "containsLetters"
+            ? "WGbutton active-button"
+            : "WGbutton"
+        }
       >
         Contains These Letters
       </button>
       <button
         onClick={() => {
-          props.setButtonSelection("containsString");
+          setButtonSelection("containsString");
+          setSelectionMade(true);
         }}
-        className="WGbutton"
+        className={
+          buttonSelection === "containsString"
+            ? "WGbutton active-button"
+            : "WGbutton"
+        }
       >
-        Scrabble Solver
+        Contains This Sequence
       </button>
       <button
         onClick={() => {
-          props.setButtonSelection("palindrome");
+          setButtonSelection("palindrome");
+          setSelectionMade(true);
         }}
-        className="WGbutton"
+        className={
+          buttonSelection === "palindrome"
+            ? "WGbutton active-button"
+            : "WGbutton"
+        }
       >
         Palindrome
       </button>
       <button
         onClick={() => {
-          props.setButtonSelection("anagram");
+          setButtonSelection("anagram");
+          setSelectionMade(true);
         }}
-        className="WGbutton"
+        className={
+          buttonSelection === "anagram" ? "WGbutton active-button" : "WGbutton"
+        }
       >
         Anagram
       </button>

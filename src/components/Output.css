@@ -4,4 +4,7 @@
     padding: 2rem;
     border: var(--dark-tan) 5px solid;
     border-radius: 5%;
+    /* let's add grid for formatting */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }

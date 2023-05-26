@@ -16,9 +16,9 @@ export function containsLetters(list, letters) {
   // creating a solutionSet
   const solutionSet = new Set();
   // create an array from argument string
-  const desiredLetters = letters.split("");
+  const desiredLetters = letters.toUpperCase().split("");
   // looping through array
-  wordList.forEach((word) => {
+  list.forEach((word) => {
     // boolean logic variable
     let isDesired = true;
     // loop through word, with ability to break
@@ -34,9 +34,8 @@ export function containsLetters(list, letters) {
       solutionSet.add(word);
     }
   });
-  console.log(solutionSet);
-  return solutionSet;
+  return Array.from(solutionSet);
 }
 
 // case example of calling above function
-// console.log(containsLetters(wordList, "ABEL"));
+console.log(containsLetters(wordList, "ABEL"));

@@ -12,18 +12,13 @@ const wordList = [
   "ROTATOR",
 ];
 
-export function palindrome(wordList) {
+export function palindrome(string) {
   // create solutionsSet to return values
-  const solutionSet = new Set();
-  console.log(wordList);
-  for (let i = 0; i < wordList.length; i++) {
-    let reverseWord = wordList[i].split("").reverse().join("");
-    if (wordList[i] == reverseWord) {
-      solutionSet.add(wordList[i]);
-    }
+  let reverseString = string.split("").reverse().join("");
+  if (string === reverseString) {
+    return "true";
   }
-  console.log(solutionSet);
-  return solutionSet;
+  return "false";
 }
 
 // console.log(palindrome(wordList));

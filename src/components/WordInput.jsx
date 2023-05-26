@@ -1,5 +1,5 @@
 import "./WordInput.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { containsLetters } from "../utils/ContainsLetters";
 import { containsString } from "../utils/ContainsString";
@@ -7,12 +7,46 @@ import { palindrome } from "../utils/Palindrome";
 import { anagram } from "../utils/Anagram";
 
 export default function WordInput(props) {
-  let inputValue = "";
+  const { setOutput, buttonSelection } = props;
+  const [inputValue, setInputValue] = useState("");
+  const [text, setText] = useState([""]);
+  useEffect(() => {
+    if (text.length === 1) {
+      fetch("/sowpods.txt")
+        .then((r) => r.text())
+        .then((text) => {
+          setText(text.split("\n"));
+        });
+    }
+  }, []);
   function handleChange(e) {
-    inputValue = e.target.value;
+    setInputValue(e.target.value);
   }
   function handleSubmit(e) {
+    // prevents refreshing the page
     e.preventDefault();
+    props.setInputGiven(true);
+    switch (buttonSelection) {
+      case "containsLetters":
+        const lettersResult = containsLetters(text, inputValue);
+        setOutput(lettersResult);
+        break;
+      case "containsString":
+        const stringResult = containsString(text, inputValue);
+        setOutput(stringResult);
+        break;
+      case "palindrome":
+        const palindromeResult = palindrome(inputValue);
+
+        setOutput(["Your ", "answer ", "is ", palindromeResult]);
+        break;
+      case "anagram":
+        const anagramResult = anagram(text, inputValue);
+        setOutput(anagramResult);
+        break;
+      default:
+        setOutput("This is a default string");
+    }
   }
   return (
     <>
@@ -24,7 +58,7 @@ export default function WordInput(props) {
           value={inputValue}
           onChange={handleChange}
         />
-        <button class="WGbutton" id="lets-play" onClick={handleSubmit}>
+        <button className="WGbutton" id="lets-play" onClick={handleSubmit}>
           Let's Play
         </button>
       </div>
