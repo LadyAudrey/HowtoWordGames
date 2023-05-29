@@ -1,24 +1,55 @@
-const wordList = [
+const testingArray = [
   "AARDWOLVES",
-  "ABEL",
   "AARGH",
   "ACT",
-  "BALE",
+  "ANTENNIFEROUS",
   "BOOK",
   "BOOKKEEPER",
   "BRR",
+  "CAT",
+  "CUESTAS",
+  "CUFF",
+  "FEEDBACK",
+  "FIDDI",
+  "KEEPER",
+  "LUNISOLAR",
+  "LUNITIDAL",
+  "LUNK",
+  "MAN",
+  "POLYPTYCHS",
+  "POLYPUS",
+  "POLYPUSES",
+  "POLYRHYTHM",
+  "POLYRHYTHMIC",
+  "PROGRAM",
+  "PROGRESS",
+  "PROLIFIC",
+  "REFERRER",
+  "REST",
+  "SNOW",
+  "SNOWMAN",
+  "SUPERORDINARY",
+  "TAC",
+  "TOKTOKKIE",
+  "TOKTOKKIES",
+  "TOLA",
+  "TOLAN",
+  "TSKTSK",
+  "UU",
+  "VACUUM",
+  "BOOKKEEPER",
 ];
 
 export function anagram(wordsArray, rack) {
-  const desiredLetters = rack.split("");
+  const desiredLetters = rack.toUpperCase();
   // create solutionsDict
   const solutionsArray = [];
-  // loop through wordList array
-  for (let i = 0; i < wordList.length; i++) {
+  // loop through wordsArray array
+  for (let i = 0; i < wordsArray.length; i++) {
     // boolean to break if it turns to false
     let isDesiredLetter = true;
     // turn "rack" into an array of desiredLetters (and lower case bc of the points dict)
-    const testWord = wordList[i];
+    const testWord = wordsArray[i];
     // loop through word to get to letter level
     for (let j = 0; j < testWord.length; j++) {
       // test if letter is in desired Letters
@@ -34,7 +65,10 @@ export function anagram(wordsArray, rack) {
       solutionsArray.push(testWord);
     }
   }
-  return solutionsArray;
+  return solutionsArray.length === 0
+    ? ["Sorry, that's not an anagram"]
+    : solutionsArray;
 }
 
-// anagram("BALE");
+console.log(anagram(testingArray, "cat"));
+// map implementation- we want it to return an array of strings

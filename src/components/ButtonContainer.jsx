@@ -6,56 +6,66 @@ export default function ButtonContainer(props) {
   const { setButtonSelection, buttonSelection, setSelectionMade } = props;
   return (
     <div id="game-buttons">
-      <button
-        onClick={() => {
-          setButtonSelection("containsLetters");
-          setSelectionMade(true);
-        }}
-        className={
-          buttonSelection === "containsLetters"
-            ? "WGbutton active-button"
-            : "WGbutton"
-        }
-      >
-        Contains These Letters
-      </button>
-      <button
-        onClick={() => {
-          setButtonSelection("containsString");
-          setSelectionMade(true);
-        }}
-        className={
-          buttonSelection === "containsString"
-            ? "WGbutton active-button"
-            : "WGbutton"
-        }
-      >
-        Contains This Sequence
-      </button>
-      <button
-        onClick={() => {
-          setButtonSelection("palindrome");
-          setSelectionMade(true);
-        }}
-        className={
-          buttonSelection === "palindrome"
-            ? "WGbutton active-button"
-            : "WGbutton"
-        }
-      >
-        Palindrome
-      </button>
-      <button
-        onClick={() => {
-          setButtonSelection("anagram");
-          setSelectionMade(true);
-        }}
-        className={
-          buttonSelection === "anagram" ? "WGbutton active-button" : "WGbutton"
-        }
-      >
-        Anagram
-      </button>
+      {(buttonSelection === "" || buttonSelection === "containsLetters") && (
+        <button
+          onClick={() => {
+            setButtonSelection("containsLetters");
+            setSelectionMade(true);
+          }}
+          className={
+            buttonSelection === "containsLetters"
+              ? "btn btn-danger btn-lg active-button"
+              : "btn btn-danger btn-lg"
+          }
+        >
+          Contains These Letters
+        </button>
+      )}
+      {(buttonSelection === "" || buttonSelection === "containsString") && (
+        <button
+          onClick={() => {
+            setButtonSelection("containsString");
+            setSelectionMade(true);
+          }}
+          className={
+            buttonSelection === "containsString"
+              ? "btn btn-danger btn-lg active-button"
+              : "btn btn-danger btn-lg"
+          }
+        >
+          Contains This Sequence
+        </button>
+      )}
+      {(buttonSelection === "" || buttonSelection === "palindrome") && (
+        <button
+          onClick={() => {
+            setButtonSelection("palindrome");
+            setSelectionMade(true);
+          }}
+          className={
+            buttonSelection === "palindrome"
+              ? "btn btn-danger btn-lg active-button"
+              : "btn btn-danger btn-lg"
+          }
+        >
+          Palindrome
+        </button>
+      )}
+      {(buttonSelection === "" || buttonSelection === "anagram") && (
+        <button
+          onClick={() => {
+            setButtonSelection("anagram");
+            setSelectionMade(true);
+          }}
+          className={
+            buttonSelection === "anagram"
+              ? "btn btn-danger btn-lg active-button"
+              : "btn btn-danger btn-lg"
+          }
+        >
+          Anagram
+        </button>
+      )}
     </div>
   );
 }

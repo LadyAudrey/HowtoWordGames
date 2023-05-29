@@ -64,6 +64,7 @@ table {
   --lightest-greene:#C6E4B2;
   --light-green: #70b741;
   --mid-green:#448c14;
+  --light-dark-green: #1f4903;
   --dark-green: #091501;
 
   --lightest-blue: #b3c1cd;
@@ -96,6 +97,12 @@ input {
   border: var(--dark-tan) 5px solid;
   border-radius: 5%;
   font-size: 2rem;
+}
+
+.info {
+  background-image: url("/i.png");
+  height: 5vh;
+  width: auto;
 }
 
 .new-game {

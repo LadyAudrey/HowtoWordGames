@@ -4,10 +4,14 @@ import ButtonContainer from "./ButtonContainer";
 import WordInput from "./WordInput";
 import Output from "./Output";
 
-export default function Main() {
-  const [buttonSelection, setButtonSelection] = useState("");
+export default function Main(props) {
+  const {
+    buttonSelection,
+    setButtonSelection,
+    selectionMade,
+    setSelectionMade,
+  } = props;
   const [output, setOutput] = useState(["Your answer will be here"]);
-  const [selectionMade, setSelectionMade] = useState(false);
   const [inputGiven, setInputGiven] = useState(false);
 
   return (
