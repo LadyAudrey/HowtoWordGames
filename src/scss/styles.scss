@@ -1,11 +1,22 @@
 $dark: #091501;
 $light: #c9aa80;
-// $primary: #;
+$primary: #573607;
 // $secondary: ;
 // $success: #;
-$danger: #573607;
+// $danger: #;
 // $info: #;
 // $warning: #;
+
+$font-size-base: 1.5rem;
+
+// $display-font-sizes: (
+//   1: 100px,
+//   2: 4.5rem,
+//   3: 4rem,
+//   4: 3.5rem,
+//   5: 3rem,
+//   6: 2.5rem
+// );
 
 @import "bootstrap/scss/bootstrap";
 

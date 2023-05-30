@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.input-container {
+    height: 10rem;
+}
+
 #lets-play {
     background-color: var(--light-tan);
     color: var(--mid-purple);

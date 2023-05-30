@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Main.css";
+import { Container, Row, Col } from "react-bootstrap";
+
 import ButtonContainer from "./ButtonContainer";
 import WordInput from "./WordInput";
 import Output from "./Output";
@@ -15,13 +17,15 @@ export default function Main(props) {
   const [inputGiven, setInputGiven] = useState(false);
 
   return (
-    <main className="main-body">
-      <h2>What Word Games would you like to play?</h2>
-      <ButtonContainer
-        setButtonSelection={setButtonSelection}
-        buttonSelection={buttonSelection}
-        setSelectionMade={setSelectionMade}
-      />
+    <Container as="main">
+      <Row className="text-center">
+        <h2>What Word Game would you like to play?</h2>
+        <ButtonContainer
+          setButtonSelection={setButtonSelection}
+          buttonSelection={buttonSelection}
+          setSelectionMade={setSelectionMade}
+        />
+      </Row>
       {selectionMade && (
         <WordInput
           setOutput={setOutput}
@@ -30,6 +34,6 @@ export default function Main(props) {
         />
       )}
       {selectionMade && inputGiven && <Output output={output} />}
-    </main>
+    </Container>
   );
 }

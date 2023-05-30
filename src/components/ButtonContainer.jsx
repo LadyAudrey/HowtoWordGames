@@ -14,8 +14,8 @@ export default function ButtonContainer(props) {
           }}
           className={
             buttonSelection === "containsLetters"
-              ? "btn btn-danger btn-lg active-button"
-              : "btn btn-danger btn-lg"
+              ? "btn btn-primary btn-lg active-button"
+              : "btn btn-primary btn-lg"
           }
         >
           Contains These Letters
@@ -29,8 +29,8 @@ export default function ButtonContainer(props) {
           }}
           className={
             buttonSelection === "containsString"
-              ? "btn btn-danger btn-lg active-button"
-              : "btn btn-danger btn-lg"
+              ? "btn btn-primary btn-lg active-button"
+              : "btn btn-primary btn-lg"
           }
         >
           Contains This Sequence
@@ -44,8 +44,8 @@ export default function ButtonContainer(props) {
           }}
           className={
             buttonSelection === "palindrome"
-              ? "btn btn-danger btn-lg active-button"
-              : "btn btn-danger btn-lg"
+              ? "btn btn-primary btn-lg active-button"
+              : "btn btn-primary btn-lg"
           }
         >
           Palindrome
@@ -59,8 +59,8 @@ export default function ButtonContainer(props) {
           }}
           className={
             buttonSelection === "anagram"
-              ? "btn btn-danger btn-lg active-button"
-              : "btn btn-danger btn-lg"
+              ? "btn btn-primary btn-lg active-button"
+              : "btn btn-primary btn-lg"
           }
         >
           Anagram

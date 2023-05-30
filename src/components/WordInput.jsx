@@ -1,5 +1,6 @@
 import "./WordInput.css";
 import { useState, useEffect } from "react";
+import { Button, Form, FloatingLabel } from "react-bootstrap";
 
 import { containsLetters } from "../utils/ContainsLetters";
 import { containsString } from "../utils/ContainsString";
@@ -49,19 +50,29 @@ export default function WordInput(props) {
     }
   }
   return (
-    <>
-      <div id="interactive">
-        <label htmlFor="wordArgument">Your input:</label>
-        <input
+    <div id="interactive">
+      {/* <label htmlFor="wordArgument">Your input:</label> */}
+      {/* <input
           type="text"
           name="wordArgument"
           value={inputValue}
           onChange={handleChange}
+        /> */}
+      <FloatingLabel
+        controlId="wordArgument"
+        label="Input"
+        className="input-container"
+      >
+        <Form.Control
+          type="text"
+          onChange={handleChange}
+          placeholder="text"
+          // className="p-3 ms-3"
         />
-        <button className="WGbutton" id="lets-play" onClick={handleSubmit}>
-          Let's Play
-        </button>
-      </div>
-    </>
+      </FloatingLabel>
+      <button className="WGbutton" id="lets-play" onClick={handleSubmit}>
+        Let's Play
+      </button>
+    </div>
   );
 }
