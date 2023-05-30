@@ -50,7 +50,7 @@ export default function WordInput(props) {
     }
   }
   return (
-    <div id="interactive">
+    <div id="interactive" className="mt-4">
       {/* <label htmlFor="wordArgument">Your input:</label> */}
       {/* <input
           type="text"
@@ -66,13 +66,13 @@ export default function WordInput(props) {
         <Form.Control
           type="text"
           onChange={handleChange}
-          placeholder="text"
+          placeholder="sample"
           // className="p-3 ms-3"
         />
       </FloatingLabel>
-      <button className="WGbutton" id="lets-play" onClick={handleSubmit}>
+      <Button variant="primary" className="my-4" onClick={handleSubmit}>
         Let's Play
-      </button>
+      </Button>
     </div>
   );
 }
