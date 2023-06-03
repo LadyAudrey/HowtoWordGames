@@ -17,7 +17,7 @@ export default function Main(props) {
   const [inputGiven, setInputGiven] = useState(false);
 
   return (
-    <Container as="main">
+    <Container as="main" className="bg-light">
       <Row className="text-center">
         <h2>What Word Game would you like to play?</h2>
         <ButtonContainer
