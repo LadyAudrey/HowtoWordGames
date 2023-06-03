@@ -1,22 +1,30 @@
-import { Nav } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 export default function SideBar() {
   return (
-    <Nav className="w-25 h-100 d-flex flex-column bg-success" variant="tabs">
-      <Nav.Item>
-        <Nav.Link style={{ "border-radius": "none" }}>
+    <ListGroup variant="flush" className="w-25">
+      <NavLink to="/" className="text-decoration-none">
+        <ListGroup.Item variant="success" action>
           Contains These Letters
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link>Contains This String</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link>Palindrome</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link>Anagram</Nav.Link>
-      </Nav.Item>
-    </Nav>
+        </ListGroup.Item>
+      </NavLink>
+      <NavLink to="/" className="text-decoration-none">
+        <ListGroup.Item variant="success" action>
+          Contains This String
+        </ListGroup.Item>
+      </NavLink>
+      <NavLink to="/" className="text-decoration-none">
+        <ListGroup.Item variant="success" action>
+          Palidrome
+        </ListGroup.Item>
+      </NavLink>
+      <NavLink to="/" className="text-decoration-none">
+        <ListGroup.Item variant="success" action>
+          Anagram
+        </ListGroup.Item>
+      </NavLink>
+      <ListGroup.Item variant="success" className="h-100"></ListGroup.Item>
+    </ListGroup>
   );
 }
