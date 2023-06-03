@@ -5,7 +5,7 @@ export default function Header(props) {
   const { setButtonSelection, setSelectionMade } = props;
   return (
     <div className="header-container">
-      <img className="info" src="/i.png"></img>
+      {/* <img className="info" src="/i.png"></img> */}
       <h1 id="opening-tag" className="fs-1">
         Word game generator
       </h1>

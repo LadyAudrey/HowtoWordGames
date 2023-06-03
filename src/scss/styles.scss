@@ -2,9 +2,10 @@ $dark: #091501;
 $light: #c9aa80;
 $primary: #573607;
 // $secondary: ;
-// $success: #;
+$success: #448c14;
 // $danger: #;
-// $info: #;
+$info: #27669e;
+
 // $warning: #;
 
 $font-size-base: 1.5rem;
@@ -18,7 +19,6 @@ $font-size-base: 1.5rem;
 //   6: 2.5rem
 // );
 
-@import "bootstrap/scss/bootstrap";
 
 // CP in from App.css
 // --lightest-tan: #f1e8da;
@@ -43,3 +43,5 @@ $font-size-base: 1.5rem;
 //   --dark-blue: #032038;
 
 // fix anagram Fx
+
+@import "bootstrap/scss/bootstrap";

@@ -4,6 +4,7 @@ import "./scss/styles.scss";
 
 import { useState } from "react";
 import Header from "./components/Header";
+import SideBar from "./components/SideBar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 
@@ -16,12 +17,15 @@ function App() {
         setButtonSelection={setButtonSelection}
         setSelectionMade={setSelectionMade}
       />
-      <Main
-        buttonSelection={buttonSelection}
-        setButtonSelection={setButtonSelection}
-        selectionMade={selectionMade}
-        setSelectionMade={setSelectionMade}
-      />
+      <div className="d-flex" style={{ height: "75vh" }}>
+        <SideBar />
+        <Main
+          buttonSelection={buttonSelection}
+          setButtonSelection={setButtonSelection}
+          selectionMade={selectionMade}
+          setSelectionMade={setSelectionMade}
+        />
+      </div>
       <Footer />
     </>
   );

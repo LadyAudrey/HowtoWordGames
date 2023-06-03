@@ -1,10 +1,5 @@
 #print {
-    background-color: var(--dark-blue);
-    font-size: 2rem;
-    padding: 2rem;
-    border: var(--dark-tan) 5px solid;
-    border-radius: 5%;
-    /* let's add grid for formatting */
+    width: fit-content;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
