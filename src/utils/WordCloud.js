@@ -1,32 +1,23 @@
-// import { render } from "react-dom";
-// import WordCloud from "react-d3-cloud";
+import { TagCloud } from "react-tagcloud";
 
 const testString = "We are what we love";
 
 export function wordCloud(testString) {
   const lowerTestString = testString.toLowerCase();
   const wordArray = lowerTestString.split(" ");
-  const data = [{}];
+  const data = [];
   wordArray.forEach((word) => {
-    if (word in data) {
-      data[word]++;
-    } else {
-      data[word] = 1;
+    // test if word is a key in a dictionary
+    for (let i = 0; i < data.length; i++) {
+      // if it is, increase it's value
+      if (data[i].value === word) {
+        data[i].count++;
+        break;
+      } else {
+      }
     }
+    // else add it
+    data.push({ value: word, count: 1 });
   });
-  console.log(data);
   return data;
 }
-
-// const data = [
-//     { text: 'Hey', value: 1000 },
-//     { text: 'lol', value: 200 },
-//     { text: 'first impression', value: 800 },
-//     { text: 'very cool', value: 1000000 },
-//     { text: 'duck', value: 10 },
-//   ];
-
-//   render(<WordCloud data={data} />, document.getElementById('root'));
-// // export function findOccurencesOfWords (string){
-// //     return(Map)
-// // }

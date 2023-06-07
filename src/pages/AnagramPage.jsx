@@ -4,7 +4,7 @@ import { useState } from "react";
 import { palindrome } from "../utils/Palindrome";
 
 export default function AnagramPage() {
-  const [output, setOutput] = useState(["Your answer will be here"]);
+  const [output, setOutput] = useState(["Your anagram(s) will be here"]);
   const [inputGiven, setInputGiven] = useState(false);
   return (
     <div className="w-75 h-100 bg-light overflow-auto">

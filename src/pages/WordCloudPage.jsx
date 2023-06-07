@@ -2,6 +2,8 @@ import Output from "../components/Output";
 import WordInput from "../components/WordInput";
 import { useState } from "react";
 import { wordCloud } from "../utils/WordCloud";
+import { TagCloud } from "react-tagcloud";
+import WordCloudOutput from "../components/WordCloudOutput";
 
 export default function WordCloudPage() {
   const [output, setOutput] = useState(["Your word cloud will be here"]);
@@ -14,7 +16,8 @@ export default function WordCloudPage() {
         setInputGiven={setInputGiven}
         buttonSelection="wordCloud"
       />
-      <Output output={output} />
+
+      <WordCloudOutput output={output} />
     </div>
   );
 }
