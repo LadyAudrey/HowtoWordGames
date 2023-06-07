@@ -3,7 +3,6 @@ import { Table } from "react-bootstrap";
 
 export default function Output(props) {
   const { output } = props;
-  console.log("output ", output[0]);
   return (
     <div
       id="print"

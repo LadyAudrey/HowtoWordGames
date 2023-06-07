@@ -14,17 +14,21 @@ export default function SideBar() {
           Contains This String
         </ListGroup.Item>
       </NavLink>
-      <NavLink to="/" className="text-decoration-none">
+      <NavLink to="/palindrome" className="text-decoration-none">
         <ListGroup.Item variant="success" action>
-          Palidrome
+          Palindrome
         </ListGroup.Item>
       </NavLink>
-      <NavLink to="/" className="text-decoration-none">
+      <NavLink to="/anagram" className="text-decoration-none">
         <ListGroup.Item variant="success" action>
           Anagram
         </ListGroup.Item>
       </NavLink>
-      <ListGroup.Item variant="success" className="h-100"></ListGroup.Item>
+      <NavLink to="/wordCloud" className="text-decoration-none">
+        <ListGroup.Item variant="success" action>
+          Word Cloud
+        </ListGroup.Item>
+      </NavLink>
     </ListGroup>
   );
 }

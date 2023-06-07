@@ -66,6 +66,21 @@ export default function ButtonContainer(props) {
           Anagram
         </button>
       )}
+      {(buttonSelection === "" || buttonSelection === "wordCloud") && (
+        <button
+          onClick={() => {
+            setButtonSelection("wordCloud");
+            setSelectionMade(true);
+          }}
+          className={
+            buttonSelection === "wordCloud"
+              ? "btn btn-primary btn-lg active-button"
+              : "btn btn-primary btn-lg"
+          }
+        >
+          Word Cloud
+        </button>
+      )}
     </div>
   );
 }

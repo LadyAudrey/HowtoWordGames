@@ -1,45 +1,3 @@
-const testingArray = [
-  "AARDWOLVES",
-  "AARGH",
-  "ACT",
-  "ANTENNIFEROUS",
-  "BOOK",
-  "BOOKKEEPER",
-  "BRR",
-  "CAT",
-  "CUESTAS",
-  "CUFF",
-  "FEEDBACK",
-  "FIDDI",
-  "KEEPER",
-  "LUNISOLAR",
-  "LUNITIDAL",
-  "LUNK",
-  "MAN",
-  "POLYPTYCHS",
-  "POLYPUS",
-  "POLYPUSES",
-  "POLYRHYTHM",
-  "POLYRHYTHMIC",
-  "PROGRAM",
-  "PROGRESS",
-  "PROLIFIC",
-  "REFERRER",
-  "REST",
-  "SNOW",
-  "SNOWMAN",
-  "SUPERORDINARY",
-  "TAC",
-  "TOKTOKKIE",
-  "TOKTOKKIES",
-  "TOLA",
-  "TOLAN",
-  "TSKTSK",
-  "UU",
-  "VACUUM",
-  "BOOKKEEPER",
-];
-
 export function anagram(wordsArray, rack) {
   const desiredLetters = rack.toUpperCase();
   // create solutionsDict
@@ -66,9 +24,9 @@ export function anagram(wordsArray, rack) {
     }
   }
   return solutionsArray.length === 0
-    ? ["Sorry, that's not an anagram"]
+    ? ["Sorry, there are no anagrams for that word"]
     : solutionsArray;
 }
 
-console.log(anagram(testingArray, "cat"));
+// console.log(anagram(testingArray, "cat"));
 // map implementation- we want it to return an array of strings

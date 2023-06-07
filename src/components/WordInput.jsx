@@ -6,6 +6,7 @@ import { containsLetters } from "../utils/ContainsLetters";
 import { containsString } from "../utils/ContainsString";
 import { palindrome } from "../utils/Palindrome";
 import { anagram } from "../utils/Anagram";
+import { wordCloud } from "../utils/WordCloud";
 
 export default function WordInput(props) {
   const { setOutput, buttonSelection } = props;
@@ -44,6 +45,10 @@ export default function WordInput(props) {
       case "anagram":
         const anagramResult = anagram(text, inputValue);
         setOutput(anagramResult);
+        break;
+      case "wordCloud":
+        const wordCloudResult = wordCloud(inputValue);
+        setOutput(wordCloudResult);
         break;
       default:
         setOutput("This is a default string");

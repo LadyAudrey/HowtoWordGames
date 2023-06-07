@@ -1,14 +1,3 @@
-const wordList = [
-  "AARDWOLVES",
-  "ABEL",
-  "AARGH",
-  "ACT",
-  "BALE",
-  "BOOK",
-  "BOOKKEEPER",
-  "BRR",
-];
-
 export function containsString(wordList, string) {
   // creating solutionArray; needs to be here to reset for onclick
   const solutionArray = [];
