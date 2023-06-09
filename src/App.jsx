@@ -26,9 +26,10 @@ function App() {
         <SideBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/restart" element={<HomePage />} />
           <Route path="/palindrome" element={<PalindromePage />} />
           <Route path="/anagram" element={<AnagramPage />} />
-          <Route path="/wordCloud" element={<WordCloudPage />} />
+          <Route path="/word-cloud" element={<WordCloudPage />} />
         </Routes>
       </div>
       <Footer />

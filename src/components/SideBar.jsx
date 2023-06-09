@@ -24,7 +24,7 @@ export default function SideBar() {
           Anagram
         </ListGroup.Item>
       </NavLink>
-      <NavLink to="/wordCloud" className="text-decoration-none">
+      <NavLink to="/word-cloud" className="text-decoration-none">
         <ListGroup.Item variant="success" action>
           Word Cloud
         </ListGroup.Item>
