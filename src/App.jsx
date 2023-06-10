@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { useState } from "react";
 import HomePage from "./pages/HomePage";
+import ScrabbleSolverPage from "./pages/ScrabbleSolverPage";
 import PalindromePage from "./pages/PalindromePage";
 import AnagramPage from "./pages/AnagramPage";
 import WordCloudPage from "./pages/WordCloudPage";
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/restart" element={<HomePage />} />
+          <Route path="/scrabble-solver" element={<ScrabbleSolverPage />} />
           <Route path="/palindrome" element={<PalindromePage />} />
           <Route path="/anagram" element={<AnagramPage />} />
           <Route path="/word-cloud" element={<WordCloudPage />} />

@@ -38,4 +38,4 @@ export function containsLetters(list, letters) {
 }
 
 // case example of calling above function
-// console.log(containsLetters(wordList, "ABEL"));
+console.log(containsLetters(wordList, "AJQKANSIEU"));

@@ -3,10 +3,11 @@ import { Table } from "react-bootstrap";
 
 export default function Output(props) {
   const { output } = props;
+  console.log(props);
   return (
     <div
       id="print"
-      className="bg-success m-auto p-3 rounded-5 border border-5 border-info"
+      className="bg-success m-5 p-3 rounded-5 border border-5 border-info"
     >
       {output.map((value, index) => {
         return (

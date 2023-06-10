@@ -17,7 +17,7 @@ export default function WordCloudPage() {
     setOutput(wordCloud(inputValue));
   }
   return (
-    <div className="w-75 h-100 bg-light overflow-auto">
+    <div className="w-75 h-100 bg-light overflow-auto px-5 text-center">
       <h2 className="text-center">Word Cloud</h2>
       <Form.Control
         as="textarea"

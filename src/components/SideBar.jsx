@@ -4,14 +4,9 @@ import { NavLink } from "react-router-dom";
 export default function SideBar() {
   return (
     <ListGroup variant="flush" className="w-25">
-      <NavLink to="/" className="text-decoration-none">
+      <NavLink to="/scrabble-solver" className="text-decoration-none">
         <ListGroup.Item variant="success" action>
-          Contains These Letters
-        </ListGroup.Item>
-      </NavLink>
-      <NavLink to="/" className="text-decoration-none">
-        <ListGroup.Item variant="success" action>
-          Contains This String
+          Scrabble Solver
         </ListGroup.Item>
       </NavLink>
       <NavLink to="/palindrome" className="text-decoration-none">
