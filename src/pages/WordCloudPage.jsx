@@ -25,7 +25,7 @@ export default function WordCloudPage() {
         rows={5}
         onChange={handleChange}
         placeholder="sample"
-        // className="p-3 ms-3"
+        className="p-3 ms-3"
       />
       <Button variant="primary" className="my-4 m-auto" onClick={handleSubmit}>
         Let's Play

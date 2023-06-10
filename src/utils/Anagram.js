@@ -2,7 +2,6 @@ export function anagram(wordsArray, rack) {
   const rackUpperCaseArray = rack.toUpperCase().split("");
   const rackMap = {};
   const solutionsArray = [];
-  console.log(rackUpperCaseArray);
 
   // make rack into a dictionary with letters as strings and times repeated as values
   rackUpperCaseArray.forEach((letter) => {
@@ -15,7 +14,7 @@ export function anagram(wordsArray, rack) {
   // get to the letter level in each word of possibleWordsArray
   for (let i = 0; i < wordsArray.length; i++) {
     const testWord = wordsArray[i];
-    if (testWord === rack || testWord.length !== rack.length) {
+    if (testWord === rack.toUpperCase() || testWord.length !== rack.length) {
       continue;
     }
     const testWordDict = {};
@@ -39,6 +38,7 @@ export function anagram(wordsArray, rack) {
       solutionsArray.push(testWord);
     }
   }
+  console.log(solutionsArray.length, solutionsArray);
   return solutionsArray.length === 0
     ? ["Sorry, there are no anagrams for that word"]
     : solutionsArray;

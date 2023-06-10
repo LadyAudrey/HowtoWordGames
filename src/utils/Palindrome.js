@@ -1,8 +1,9 @@
 export function palindrome(string) {
   // create solutionsSet to return values
-  let reverseString = string.split("").reverse().join("");
-  if (string === reverseString) {
-    return "true";
+  let reverseString = string.toUpperCase().split("").reverse().join("");
+  if (string.toUpperCase() === reverseString) {
+    return `${string} is a palindrome`;
   }
-  return "false";
+  return `${string} is not a palindrome`;
 }
+

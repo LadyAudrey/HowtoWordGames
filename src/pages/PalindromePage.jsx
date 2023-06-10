@@ -1,20 +1,33 @@
-import Output from "../components/Output";
-import WordInput from "../components/WordInput";
 import { useState } from "react";
+import { Form, Button } from "react-bootstrap";
 import { palindrome } from "../utils/Palindrome";
+import "./palindrome.css";
 
 export default function PalindromePage() {
-  const [output, setOutput] = useState(["Your answer will be here"]);
-  const [inputGiven, setInputGiven] = useState(false);
+  const [output, setOutput] = useState("Your answer will be here");
+  const [inputValue, setInputValue] = useState("");
+  function handleChange(e) {
+    setInputValue(e.target.value);
+  }
+  function handleSubmit() {
+    setOutput(palindrome(inputValue));
+  }
   return (
-    <div className="w-75 h-100 bg-light">
+    <div className="w-75 h-100 bg-light px-5 text-center">
       <h2 className="text-center">Palindrome</h2>
-      <WordInput
-        setOutput={setOutput}
-        setInputGiven={setInputGiven}
-        buttonSelection="palindrome"
+      <Form.Control
+        type="text"
+        value={inputValue}
+        onChange={handleChange}
+        placeholder="sample"
+        className="p-3 ms-3"
       />
-      <Output output={output} />
+      <Button variant="primary" className="my-4 m-auto" onClick={handleSubmit}>
+        Let's Play
+      </Button>
+      <div className="border border-5 rounded-3 m-auto p-3 bg-success output">
+        {output}
+      </div>
     </div>
   );
 }

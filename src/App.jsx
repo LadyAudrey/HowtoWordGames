@@ -2,8 +2,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./scss/styles.scss";
 import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-import { useState } from "react";
 import HomePage from "./pages/HomePage";
 import ScrabbleSolverPage from "./pages/ScrabbleSolverPage";
 import PalindromePage from "./pages/PalindromePage";
@@ -17,6 +17,7 @@ import Footer from "./components/Footer";
 function App() {
   const [buttonSelection, setButtonSelection] = useState("");
   const [selectionMade, setSelectionMade] = useState(false);
+  const [text, setText] = useState([]);
   return (
     <>
       <Header
@@ -26,11 +27,17 @@ function App() {
       <div className="d-flex" style={{ height: "75vh" }}>
         <SideBar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/"
+            element={<HomePage setText={setText} text={text} />}
+          />
           <Route path="/restart" element={<HomePage />} />
-          <Route path="/scrabble-solver" element={<ScrabbleSolverPage />} />
+          <Route
+            path="/scrabble-solver"
+            element={<ScrabbleSolverPage wordArray={text} />}
+          />
           <Route path="/palindrome" element={<PalindromePage />} />
-          <Route path="/anagram" element={<AnagramPage />} />
+          <Route path="/anagram" element={<AnagramPage wordArray={text} />} />
           <Route path="/word-cloud" element={<WordCloudPage />} />
         </Routes>
       </div>
