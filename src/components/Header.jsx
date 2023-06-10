@@ -15,7 +15,7 @@ export default function Header(props) {
           className="bg-dark p-0 border-0 rounded-circle"
           id="header-restart"
         >
-          <img className="new-game" src="/gamepad.svg" />
+          <img className="new-game" src="gamepad.svg" />
         </Button>
       </NavLink>
     </div>

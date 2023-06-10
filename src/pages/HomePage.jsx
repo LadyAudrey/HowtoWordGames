@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export default function HomePage(props) {
   useEffect(() => {
     if (props.text.length < 1) {
-      fetch("/sowpods.txt")
+      fetch("sowpods.txt")
         .then((r) => r.text())
         .then((text) => {
           props.setText(text.split("\n"));
@@ -12,7 +12,7 @@ export default function HomePage(props) {
   }, []);
   return (
     <div className="h-100 w-75 bg-light">
-      <h2>Select an option to the left</h2>
+      <h2 className="text-center">Select an option to the left</h2>
     </div>
   );
 }

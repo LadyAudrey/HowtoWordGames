@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./scss/styles.scss";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import HomePage from "./pages/HomePage";
@@ -39,6 +39,7 @@ function App() {
           <Route path="/palindrome" element={<PalindromePage />} />
           <Route path="/anagram" element={<AnagramPage wordArray={text} />} />
           <Route path="/word-cloud" element={<WordCloudPage />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
       <Footer />
