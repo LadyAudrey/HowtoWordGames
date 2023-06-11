@@ -24,15 +24,17 @@ export default function WordCloudPage() {
         value={inputValue}
         rows={5}
         onChange={handleChange}
-        placeholder="sample"
-        className="p-3 ms-3"
+        placeholder="A large paragraph"
+        className="p-3"
       />
       <Button variant="primary" className="my-4 m-auto" onClick={handleSubmit}>
         Let's Play
       </Button>
-      <div className="border border-5 rounded-3 m-5 p-3 bg-success">
-        <TagCloud tags={output} minSize={12} maxSize={99} />
-      </div>
+      {output.length > 0 && (
+        <div className="border border-5 rounded-3 m-3 p-3 bg-success">
+          <TagCloud tags={output} minSize={12} maxSize={99} />
+        </div>
+      )}
     </div>
   );
 }
