@@ -14,7 +14,7 @@ export default function WordInput(props) {
   const [text, setText] = useState([""]);
   useEffect(() => {
     if (text.length === 1) {
-      fetch("/sowpods.txt")
+      fetch(import.meta.env.BASE_URL + "/sowpods.txt")
         .then((r) => r.text())
         .then((text) => {
           setText(text.split("\n"));
