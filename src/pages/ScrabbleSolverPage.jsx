@@ -2,8 +2,12 @@ import Output from "../components/Output";
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import scrabbleSolver from "../utils/ScrabbleSolver";
+import { Navigate } from "react-router-dom";
 
 export default function ScrabbleSolverPage(props) {
+  if (props.wordArray.length < 1) {
+    return <Navigate to={import.meta.env.BASE_URL + "/"} />;
+  }
   const [output, setOutput] = useState([
     "Your",
     "answer",
