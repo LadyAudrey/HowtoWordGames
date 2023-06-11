@@ -19,7 +19,7 @@ export default function PalindromePage() {
         type="text"
         value={inputValue}
         onChange={handleChange}
-        placeholder="sample"
+        placeholder="Example"
         className="p-3 ms-3"
       />
       <Button variant="primary" className="my-4 m-auto" onClick={handleSubmit}>
