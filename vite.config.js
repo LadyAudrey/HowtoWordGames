@@ -5,5 +5,5 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   //if I want to deploy, uncomment the below
-  // base: "/HowtoWordGames/",
+  base: "/HowtoWordGames",
 });
