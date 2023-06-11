@@ -1,5 +1,5 @@
 #print {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
