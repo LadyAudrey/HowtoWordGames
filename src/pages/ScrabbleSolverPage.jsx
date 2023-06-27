@@ -2,15 +2,13 @@ import Output from "../components/Output";
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import scrabbleSolver from "../utils/ScrabbleSolver";
+import { Navigate } from "react-router-dom";
 
 export default function ScrabbleSolverPage(props) {
-  const [output, setOutput] = useState([
-    "Your",
-    "answer",
-    "will",
-    "be",
-    "here",
-  ]);
+  if (props.wordArray.length < 1) {
+    return <Navigate to={import.meta.env.BASE_URL + "/"} />;
+  }
+  const [output, setOutput] = useState([]);
   const [inputValue, setInputValue] = useState("");
   function handleChange(e) {
     setInputValue(e.target.value);
@@ -32,7 +30,7 @@ export default function ScrabbleSolverPage(props) {
       <Button variant="primary" className="my-4 m-auto" onClick={handleSubmit}>
         Let's Play
       </Button>
-      <Output output={output} />
+      {output.length > 0 && <Output output={output} />}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { palindrome } from "../utils/Palindrome";
 import "./palindrome.css";
 
 export default function PalindromePage() {
-  const [output, setOutput] = useState("Your answer will be here");
+  const [output, setOutput] = useState("");
   const [inputValue, setInputValue] = useState("");
   function handleChange(e) {
     setInputValue(e.target.value);
@@ -19,15 +19,17 @@ export default function PalindromePage() {
         type="text"
         value={inputValue}
         onChange={handleChange}
-        placeholder="sample"
+        placeholder="Example"
         className="p-3 ms-3"
       />
       <Button variant="primary" className="my-4 m-auto" onClick={handleSubmit}>
         Let's Play
       </Button>
-      <div className="border border-5 rounded-3 m-auto p-3 bg-success output">
-        {output}
-      </div>
+      {output.length > 0 && (
+        <div className="border border-5 rounded-3 m-auto p-3 bg-success output">
+          {output}
+        </div>
+      )}
     </div>
   );
 }

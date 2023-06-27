@@ -2,15 +2,13 @@ import Output from "../components/Output";
 import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import { anagram } from "../utils/Anagram";
+import { Navigate } from "react-router-dom";
 
 export default function AnagramPage(props) {
-  const [output, setOutput] = useState([
-    "Your",
-    "anagram(s)",
-    "will",
-    "be",
-    "here",
-  ]);
+  if (props.wordArray.length < 1) {
+    return <Navigate to={import.meta.env.BASE_URL + "/"} />;
+  }
+  const [output, setOutput] = useState([]);
   const [inputValue, setInputValue] = useState("");
   function handleChange(e) {
     setInputValue(e.target.value);
@@ -26,13 +24,13 @@ export default function AnagramPage(props) {
         value={inputValue}
         rows={5}
         onChange={handleChange}
-        placeholder="sample"
+        placeholder="Any word here"
         className="p-3"
       />
       <Button variant="primary" className="my-4 m-auto" onClick={handleSubmit}>
         Let's Play
       </Button>
-      <Output output={output} />
+      {output.length > 0 && <Output output={output} />}
     </div>
   );
 }
