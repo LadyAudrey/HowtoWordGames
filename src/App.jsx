@@ -57,12 +57,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <Main
-                buttonSelection={buttonSelection}
-                setButtonSelection={setButtonSelection}
-                selectionMade={selectionMade}
-                setSelectionMade={setSelectionMade}
-              /> */
-}

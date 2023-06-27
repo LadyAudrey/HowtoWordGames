@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { palindrome } from "../utils/Palindrome";
-import "./palindrome.css";
+import Output from "../components/Output";
 
 export default function PalindromePage() {
   const [output, setOutput] = useState("");
@@ -25,11 +25,7 @@ export default function PalindromePage() {
       <Button variant="primary" className="my-4 m-auto" onClick={handleSubmit}>
         Let's Play
       </Button>
-      {output.length > 0 && (
-        <div className="border border-5 rounded-3 m-auto p-3 bg-success output">
-          {output}
-        </div>
-      )}
+      {output.length > 0 && <Output output={output} />}
     </div>
   );
 }
